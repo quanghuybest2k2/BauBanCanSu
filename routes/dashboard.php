@@ -35,49 +35,11 @@
             <h1>HỆ THỐNG BẦU CỬ</h1>  
             </div>
             <!-- Tạo bỏ phiếu -->
-            <div id="create">
-                <!-- <a href="../api/create.php"><button id="create-button" onclick="document.getElementById('id01').style.display='block'"
-                style="width: auto">Tạo bỏ phiếu</button></a> -->
-                <button id="create-button" onclick="document.getElementById('id01').style.display='block'"
-                style="width: auto">Tạo bỏ phiếu</button>    
-                    <!-- ẩn -->
-                    <div id="id01" class="modal">
-                    <span
-                        onclick="document.getElementById('id01').style.display='none'"
-                        class="close"
-                        title="Đóng"
-                        >&times;</span
-                    >
-                    <!-- end ẩn -->
-                    <form class="modal-content" action="/">
-                        <div class="container">
-                        <h1>Tạo bỏ phiếu</h1>
-                        <p>Điền thông tin bầu ban cán sự lớp</p>
-                        <hr />
-
-                        <label for="vote-name"><b>Tên cuộc bỏ phiếu</b></label>
-                        <input
-                            type="text"
-                            placeholder="Nhập cuộc tên cuộc bỏ phiếu"
-                            name="vote-name"
-                            required
-                        />
-
-                        <div class="clearfix">
-                            <button
-                            type="button"
-                            onclick="document.getElementById('id01').style.display='none'"
-                            class="cancelbtn"
-                            >
-                            Hủy bỏ
-                            </button>
-                            <button type="submit" class="create-vote">Tạo bỏ phiếu</button>
-                        </div>
-                        </div>
-                    </form>
-                    </div>
-            </div>
+            <?php include "create-button.php"; ?>
             <!-- Xong Tạo bỏ phiếu -->
+            <!-- Tên cuộc bỏ phiếu -->
+            <?php include "display-vote.php"; ?>
+            <!-- Kết thúc cuộc bỏ phiếu -->
             </center>
             <hr>
 

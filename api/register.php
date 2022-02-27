@@ -18,7 +18,7 @@
     }
     else{
         move_uploaded_file($tmp_name,"../uploads/$image");
-        $insert = mysqli_query($connect, "insert into user (name, mobile, password, address, photo, status, votes, role) values('$name', '$mobile', '$pass', '$add', '$image', 0, 0, '$role') ");
+        $insert = mysqli_query($connect, "INSERT into user (name, mobile, password, address, photo, status, votes, role) values('$name', '$mobile', '$pass', '$add', '$image', 0, 0, '$role') ");
         if($insert){
             echo '<script>
                     alert("Chúc mừng! Đăng ký thành công.");

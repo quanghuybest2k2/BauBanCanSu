@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 15, 2021 at 07:55 AM
--- Server version: 10.1.36-MariaDB
--- PHP Version: 7.2.11
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th2 27, 2022 lúc 08:31 AM
+-- Phiên bản máy phục vụ: 10.4.22-MariaDB
+-- Phiên bản PHP: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `online-voting-system`
+-- Cơ sở dữ liệu: `online-voting-system`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Cấu trúc bảng cho bảng `user`
 --
 
 CREATE TABLE `user` (
@@ -37,37 +36,38 @@ CREATE TABLE `user` (
   `photo` varchar(255) NOT NULL,
   `status` int(11) NOT NULL,
   `votes` int(11) NOT NULL,
-  `role` int(11) NOT NULL
+  `role` int(11) NOT NULL,
+  `create_vote` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `user`
+-- Đang đổ dữ liệu cho bảng `user`
 --
 
-INSERT INTO `user` (`id`, `name`, `mobile`, `password`, `address`, `photo`, `status`, `votes`, `role`) VALUES
-(4, 'Shahebaz Khan Shabbir Khan Pathan', 9511846837, 123, 'Andheri East, Near Govt. College, Mumbai', 'boy.png', 1, 0, 1),
-(5, 'Soehl Khan Salim Khan Pathan', 9511846838, 123, 'Andheri East, Near Govt. College, Pune', 'Animal-Heroes-cartoon-icon-19.png', 1, 1, 2),
-(6, 'Shoaib Khan Shabbir Khan Pathan', 9511846839, 123, 'Andheri East, Near Govt. College, Goa', 'plant.png', 1, 2, 2);
+INSERT INTO `user` (`id`, `name`, `mobile`, `password`, `address`, `photo`, `status`, `votes`, `role`, `create_vote`) VALUES
+(1, 'Đoàn Quang Huy', 859476166, 0, 'Ninh Thuận, Việt Nam', 'Avt Huy.jpg', 1, 2, 2, 'Bầu lớp trưởng'),
+(2, 'Trần Nhật Duật', 966668888, 0, 'Thanh Hóa, Việt Nam', 'Duật.jpg', 1, 0, 1, 'Bầu thư ký'),
+(3, 'Tokuda', 798258497, 0, 'Tokyo, Nhật Bản', 'tokuda.jpg', 1, 1, 2, '');
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `user`
+-- Chỉ mục cho bảng `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT cho bảng `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
